@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <TabPane layoutX="6.0" prefHeight="393.0" prefWidth="591.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Create Product">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox alignment="CENTER_RIGHT" layoutX="4.0" layoutY="1.0" prefHeight="354.0" prefWidth="120.0" spacing="20.0">
+                           <children>
+                              <Label text="Name">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Quantity">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Price">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" layoutX="124.0" layoutY="5.0" prefHeight="355.0" prefWidth="151.0" spacing="23.0">
+                           <children>
+                              <TextField fx:id="textName" />
+                              <TextField fx:id="textQuanitity" />
+                              <TextField fx:id="textPrice" />
+                           </children>
+                        </VBox>
+                        <Button layoutX="344.0" layoutY="158.0" mnemonicParsing="false" onAction="#createProduct" prefHeight="42.0" prefWidth="117.0" text="Create Product" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="List Product">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="2.0" layoutY="6.0" prefHeight="351.0" prefWidth="155.0">
+                           <children>
+                              <ListView fx:id="productList" onMouseClicked="#selectProduct" prefHeight="348.0" prefWidth="158.0" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" layoutX="178.0" layoutY="29.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label text="Name">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Quantity">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label text="Price">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" layoutX="306.0" layoutY="30.0" prefHeight="200.0" prefWidth="100.0">
+                           <children>
+                              <Label fx:id="labelName">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="LabelQuantity">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelPrice">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <Button layoutX="439.0" layoutY="102.0" mnemonicParsing="false" onAction="#purchase" prefHeight="42.0" prefWidth="80.0" text="Purchase" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
